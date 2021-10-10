@@ -24,6 +24,7 @@ st.sidebar.markdown('Latest release:'+str(releasemark)+' | (Contact: tqthooo2021
 labfunc = st.sidebar.selectbox('Lab Functions:',
 [
     '[1] 测试模块1',
+    '[2] 测试模块2',
 ])
 
 if labfunc == '[1] 测试模块1':
@@ -31,6 +32,9 @@ if labfunc == '[1] 测试模块1':
 
     # data upload
     uploaded_files1 = st.sidebar.file_uploader('test:')
+
+elif labfunc == '[2] 测试模块2':
+    st.markdown('module2 test')
 
 else:
     nothing = 'do nothing'

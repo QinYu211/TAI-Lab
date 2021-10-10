@@ -4,8 +4,7 @@ create by:2021.10
 function:T's AI model research lab
 '''
 
-# config
-from platform import release
+# requirements
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -23,18 +22,31 @@ st.sidebar.markdown('Latest release:'+str(releasemark)+' | (Contact: tqthooo2021
 
 labfunc = st.sidebar.selectbox('Lab Functions:',
 [
-    '[1] 测试模块1',
+    '[1] VisualTest',
     '[2] 测试模块2',
 ])
 
-if labfunc == '[1] 测试模块1':
-    st.markdown('module1 test')
-
-    # data upload
-    uploaded_files1 = st.sidebar.file_uploader('test:')
+if labfunc == '[1] VisualTest':
+    st.markdown('简单可视化应用测试')
+    # import pandas as pd
+    # import numpy as np
+    
+    chart_data = pd.DataFrame(
+        np.random.randn(20,3),
+        columns=['a','b','c']
+    )
+    st.area_chart(chart_data)
+    st.bar_chart(chart_data)
+    st.line_chart(chart_data)
+    
+    
+    
 
 elif labfunc == '[2] 测试模块2':
     st.markdown('module2 test')
+
+    # data upload
+    uploaded_files1 = st.sidebar.file_uploader('test2:')
 
 else:
     nothing = 'do nothing'

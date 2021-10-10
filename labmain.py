@@ -17,7 +17,7 @@ from PIL import Image
 # latest update:
 releasemark = '2021-10-10'
 
-st.sidebar.header('TAI-Lab')
+st.sidebar.header('TAI-Lab|人工智能实验室')
 st.sidebar.markdown('https://github.com/tqthooo2021/TAI-Lab')
 st.sidebar.markdown('Latest release:'+str(releasemark)+' | (Contact: tqthooo2021@163.com)')
 
